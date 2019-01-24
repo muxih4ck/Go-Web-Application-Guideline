@@ -9,11 +9,11 @@
 
 ## 主要内容
 
-### [配置规范]()
+### [配置规范](https://github.com/zxc0328/Go-Web-Application-Guideline/blob/master/content/config.md)
 
 一个 Web 应用往往有一些配置信息，比如数据库信息，健康检查超时时间等等，这些信息可能来自配置文件，环境变量或者命令行参数，所以我们可以用一个单独的配置管理库来对配置进行管理。这里我们选用的是 [Viper](https://github.com/spf13/viper) 这个库。
 
-### 错误处理规范
+### [错误处理规范](https://github.com/zxc0328/Go-Web-Application-Guideline/blob/master/content/error.md)
 
 // TODO
 
@@ -25,29 +25,23 @@
 
 在某个 API 定义好之后，我们首先针对这个 API 写单元测试，这个时候测试是失败的，然后再完成 API 的代码来通过测试。这就是测试驱动开发的要点。
 
-### 包管理规范
+### [包管理规范](https://github.com/zxc0328/Go-Web-Application-Guideline/blob/master/content/package.md)
 
-// TODO
+使用官方的 Go Module 进行包管理。
 
-使用 Go Module
+### [数据库规范](https://github.com/zxc0328/Go-Web-Application-Guideline/blob/master/content/db.md)
 
-### 数据库规范
+后端应用中，很重要的一部分就是和数据库打交道。因此我们在如何使用数据库上，需要有一个统一的规范。
 
-// TODO
 
-写 SQL 创建表，写 SQL 迁移表。不用外键。ORM 主要做两个事情，一个是数据库数据到 Go struct 的双向映射，一个是通过一些函数调用生成 SQL 来查询数据库。
+### [Log 规范](https://github.com/zxc0328/Go-Web-Application-Guideline/blob/master/content/log.md)
 
-### Log 规范
+日志是后端应用运行时的日记本，是我们排查问题，监控问题的重要检索。因此，我们要在应用中做好日志的统一管理，方便日志平台进行日志分析。因为 Docker 容器的限制（Docker 默认会把日志按行分割），我们需要将一条日志压缩在一行，目前最方便的日志格式就是 JSON 了。我们把日志信息进行序列化，就变成了一个 JSON 字符串，完美契合 Docker 的日志规范。
 
-// TODO
+### [API 文档规范](https://github.com/zxc0328/Go-Web-Application-Guideline/blob/master/content/api.md)
 
-JSON 格式的 Log
+API 文档是前后端沟通接口的重要平台，但如何统一 API 文档的格式，写出高质量的 API 文档始终是一个问题。Swagger 的出现统一了 API 文档的标准。而自动生成 Swagger 文档的工具则进一步降低了写 API 文档的成本。
 
-### API 文档规范
-
-// TODO
-
-自动生成 Swagger 文档
 
 ### Makefile 规范
 
