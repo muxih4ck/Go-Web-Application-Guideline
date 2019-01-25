@@ -19,8 +19,8 @@ import ...
 var g *gin.Engine
 
 func init() {
-    readconfig();
-    dbinit();
+    ReadConfig();
+    DbInit();
     g = gin.New()
     BindMiddlewares();
 }
