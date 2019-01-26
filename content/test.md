@@ -10,7 +10,7 @@
 
 ### 测试初始化逻辑
 
-在开始写测试之前，我们需要进行一些初始化逻辑，比如初始化数据库和配置等等。这个时候我们可以在顶级目录写一个 `common_test.go`，然后在里面写一个 `TestMain`：
+在开始写测试之前，我们需要进行一些**公共**的初始化逻辑，比如初始化数据库和配置等等。这个时候我们可以在顶级目录写一个 `common_test.go`，然后在里面写一个 `TestMain`。
 
 ```
 var (
@@ -38,6 +38,10 @@ func TestMain(m *testing.M) {
 }
 
 ```
+
+如果 Go 发现有一个 TestMain 函数，这个函数会在所有测试执行之前执行。所以我们可以在这里做一些初始化工作。在具体每个函数的测试里我们只需要关注具体的测试逻辑就行了。
+
+> 关于测试的初始化可以参考这个 [Stack Overflow 回答](https://stackoverflow.com/questions/23729790/how-can-i-do-test-setup-using-the-testing-package-in-go)。
 
 ### 编写 Handler 测试
 
