@@ -12,7 +12,7 @@
 
 在开始写测试之前，我们需要进行一些初始化逻辑，比如初始化数据库和配置等等。这个时候我们可以在顶级目录写一个 `common_test.go`，然后在里面写一个 `TestMain`：
 
-```
+```go
 var (
 	cfg = pflag.StringP("config", "c", "", "apiserver config file path.")
 )
@@ -41,7 +41,7 @@ func TestMain(m *testing.M) {
 
 ### 编写 Handler 测试
 
-```
+```go 
 // Test that a GET request to the login page returns
 // an HTTP error with code 401 for an authenticated user
 func TestSomeHandler(t *testing.T) {
@@ -73,7 +73,7 @@ func TestSomeHandler(t *testing.T) {
 
 getRouter
 
-```
+```go
 func getRouter(withTemplates bool) *gin.Engine {
 	r := gin.Default()
 	if withTemplates {
