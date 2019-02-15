@@ -17,7 +17,7 @@
 
 我们的应用中往往会有错误和异常，这并不可怕，关键是我们要把这些信息合理的呈现和记录下来，以供我们分析和排查。合理的错误处理有两个好处：一，让 API 的消费者在发生错误时，可以接收到合适的 HTTP 状态码和应用内部的错误码。二，在发生错误时，把关键信息 Log 出来，可以让我们监控错误，分析错误，发现应用上线之后的问题。有了合适的错误处理，妈妈再也不担心我没法定位用户端的报错了。
 
-### [测试规范](https://github.com/zxc0328/Go-Web-Application-Guideline/blob/master/content/test.md)
+### [测试 && CI 规范](https://github.com/zxc0328/Go-Web-Application-Guideline/blob/master/content/test.md)
 
 在某个 API 定义好之后，我们首先针对这个 API 写单元测试，这个时候测试是失败的，然后再完成 API 的代码来通过测试。这就是测试驱动开发的要点。
 
@@ -41,7 +41,7 @@ API 文档是前后端沟通接口的重要平台，但如何统一 API 文档�
 
 ### Makefile 规范
 
-参考小册
+参考[小册内容](https://static.muxixyz.com/makefile.pdf)
 
 ### [模板仓库](https://github.com/zxc0328/Go-Web-Application-Template)
 
