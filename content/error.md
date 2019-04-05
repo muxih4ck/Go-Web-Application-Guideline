@@ -36,8 +36,8 @@ func SendBadRequest(c *gin.Context, err error, data interface{}, cause string) {
 }
 
 func SendInternalError(c *gin.Context, err error, data interface{}, cause string) {
-	 code, message := errno.DecodeErr(err)
-    log.Error(message, lager.Data{"X-Request-Id": util.GetReqID(c), "Code": code, "cause": cause})
+      	code, message := errno.DecodeErr(err)
+    	log.Error(message, lager.Data{"X-Request-Id": util.GetReqID(c), "Code": code, "cause": cause})
 	if err != nil {
 		c.JSON(500, Response{
 			Code:    code,
