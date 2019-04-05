@@ -23,7 +23,7 @@
 
 ### [包管理规范](https://github.com/zxc0328/Go-Web-Application-Guideline/blob/master/content/package.md)
 
-虽然 Go 官方在 1.11 版本退出了官方的 Go Module 进行包管理，但在工具链上对于 Go Module 的支持还不够好。另外目前各个 Go 包管理工具之间的切换还是比较容易的。所以我们采用 Dep 作为包管理方案。以后也可以切换到 Go Module。
+虽然 Go 官方在 1.11 版本推出了官方的 Go Module 进行包管理，但在工具链上对于 Go Module 的支持还不够好。另外目前各个 Go 包管理工具之间的切换还是比较容易的。所以我们采用 Dep 作为包管理方案。以后也可以切换到 Go Module。
 
 ### [数据库规范](https://github.com/zxc0328/Go-Web-Application-Guideline/blob/master/content/db.md)
 
