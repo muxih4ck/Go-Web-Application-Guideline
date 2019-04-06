@@ -33,7 +33,7 @@ CREATE TABLE `tb_total_assets` (
 
 **外键**
 
-不适用外键。具体讨论可以看：[知乎](https://www.zhihu.com/search?type=content&q=%E4%B8%8D%E7%94%A8%E5%A4%96%E9%94%AE)
+不使用外键。具体讨论可以看：[知乎](https://www.zhihu.com/search?type=content&q=%E4%B8%8D%E7%94%A8%E5%A4%96%E9%94%AE)
 
 需要注意的是，**在应用中我们需要自行维护出现在多个表中的实体的更新和删除**。比如你有一个商品名更新了，不仅要更新商品表，还要更新有商品名字段的其他表。
 
